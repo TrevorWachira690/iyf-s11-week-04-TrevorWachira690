@@ -13,7 +13,7 @@ let score = 100;
 score = 150;  // Works!
 
 const PI = 3.14159;
-PI = 3;  
+// PI = 3;  
 // Error! const cannot be reassigned
 
 // Exercise: Variable Practice
