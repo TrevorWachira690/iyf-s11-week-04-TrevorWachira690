@@ -40,8 +40,9 @@ console.log("Student authentication:", isStudent);
 console.log("Favorite colors:", favoriteColors);
 console.log("Today's date:", todaysDate);
 
+//================
 // Age calculation
-
+//================
 const ageInYears = 18;
 const currentYear = 2026;
 
@@ -56,3 +57,24 @@ console.log(`Age in hours: ${ageInHours} hours`);
 // 3. The year you'll turn 100
 const yearTurn100 = birthYear + 100;
 console.log("Year I'll turn 100:", yearTurn100);
+
+//==================
+// Function building
+//==================
+
+// Rectangle calculation
+function calculateArea(width, height) {
+}
+
+// Temperature Conversion
+const celciustoFahrenheit = (celsius) => {
+}
+// Even number verification (Returns true if even, odd if otherwise)
+function isEven(number) {
+}
+// Function to return initials (e.g "John Doe" --> "JD")
+function getInitials(fullName) {
+}
+// Function to reverse a string
+function reverseString(str) {
+}
