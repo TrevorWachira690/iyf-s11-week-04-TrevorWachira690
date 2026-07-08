@@ -63,24 +63,24 @@ console.log("Year I'll turn 100:", yearTurn100);
 //==================
 
 // Exercise 1: Function Declarations
-let name = "Trevor";
-let a= 6;
-let b= 7;
+let Name = "Trevor";
+let a = 6;
+let b = 7;
 
 // Function declaration
-function greet(name) {
-    return `Hello, ${name}!`;
+function greet(Name) {
+    return `Hello, ${Name}!`;
 }
 
 // Function expression
 const add = function(a, b) {
     return a + b;
 };
-console.log(add)
+console.log(add(a, b));
 
 // Arrow function
 const multiply = (a, b) => a * b;
-console.log(multiply)
+console.log(multiply(a, b));
 
 // Arrow function with body
 const divide = (a, b) => {
@@ -89,23 +89,41 @@ const divide = (a, b) => {
     }
     return a / b;
 };
-console.log(divide)
+console.log(divide(a, b));
 
 // Exercise 2: Function Building 
 
 // Rectangle calculation
 function calculateArea(width, height) {
+    return width * height;
 }
+console.log("Area:", calculateArea(67, 89));
 
 // Temperature Conversion
-const celciustoFahrenheit = (celsius) => {
+const celsiusToFahrenheit = (celsius) => {
+    return (celsius * 9/5) + 32;
 }
+console.log("Fahrenheit:", celsiusToFahrenheit(25));
+
 // Even number verification (Returns true if even, odd if otherwise)
 function isEven(number) {
+    return number % 2 === 0;
 }
+console.log("Is the number even?", isEven(9));
+
 // Function to return initials (e.g "John Doe" --> "JD")
 function getInitials(fullName) {
+    let names = fullName.split(" ");
+    let initials = "";
+    for (let i = 0; i < names.length; i++) {
+        initials += names[i][0].toUpperCase();
+    }
+    return initials;
 }
+console.log("Initials:", getInitials("Trevor Wachira"));
+
 // Function to reverse a string
 function reverseString(str) {
+    return str.split("").reverse().join("");
 }
+console.log("Reversed:", reverseString("Hello, World!"));
