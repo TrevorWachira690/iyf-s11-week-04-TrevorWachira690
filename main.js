@@ -71,16 +71,19 @@ let b = 7;
 function greet(Name) {
     return `Hello, ${Name}!`;
 }
+console.log(greet(Name));
 
+console.log("a=", a);
+console.log("b=", b);
 // Function expression
 const add = function(a, b) {
     return a + b;
 };
-console.log(add(a, b));
+console.log("Addition:", add(a, b));
 
 // Arrow function
 const multiply = (a, b) => a * b;
-console.log(multiply(a, b));
+console.log("Multiplication:", multiply(a, b));
 
 // Arrow function with body
 const divide = (a, b) => {
@@ -89,7 +92,7 @@ const divide = (a, b) => {
     }
     return a / b;
 };
-console.log(divide(a, b));
+console.log("Division:", divide(a, b));
 
 // Exercise 2: Function Building 
 
@@ -97,19 +100,19 @@ console.log(divide(a, b));
 function calculateArea(width, height) {
     return width * height;
 }
-console.log("Area:", calculateArea(67, 89));
+console.log(`Area= width(${67}) * height(${89}):`, calculateArea(67, 89));
 
 // Temperature Conversion
 const celsiusToFahrenheit = (celsius) => {
     return (celsius * 9/5) + 32;
 }
-console.log("Fahrenheit:", celsiusToFahrenheit(25));
+console.log(`Celsius(${25}) to Fahrenheit:`, celsiusToFahrenheit(25));
 
 // Even number verification (Returns true if even, odd if otherwise)
 function isEven(number) {
     return number % 2 === 0;
 }
-console.log("Is the number even?", isEven(9));
+console.log(`Is the number ${9} even?`, isEven(9));
 
 // Function to return initials (e.g "John Doe" --> "JD")
 function getInitials(fullName) {
