@@ -59,8 +59,39 @@ const yearTurn100 = birthYear + 100;
 console.log("Year I'll turn 100:", yearTurn100);
 
 //==================
-// Function building
+// FUNCTIONS
 //==================
+
+// Exercise 1: Function Declarations
+let name = "Trevor";
+let a= 6;
+let b= 7;
+
+// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+console.log(add)
+
+// Arrow function
+const multiply = (a, b) => a * b;
+console.log(multiply)
+
+// Arrow function with body
+const divide = (a, b) => {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+};
+console.log(divide)
+
+// Exercise 2: Function Building 
 
 // Rectangle calculation
 function calculateArea(width, height) {
