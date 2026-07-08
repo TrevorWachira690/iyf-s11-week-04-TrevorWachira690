@@ -47,11 +47,11 @@ const currentYear = 2026;
 
 // 1. Age in days (approximately)
 const ageInDays = ageInYears * 365;
-console.log("Age in days:", ageInDays, "days");
+console.log(`Age in days: ${ageInDays} days`);
 
 // 2. Age in hours
 const ageInHours = ageInDays * 24;
-console.log("Age in hours:", ageInHours, "hours");
+console.log(`Age in hours: ${ageInHours} hours`);
 
 // 3. The year you'll turn 100
 const yearTurn100 = birthYear + 100;
