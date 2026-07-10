@@ -234,3 +234,166 @@ for (let i = 1; i <= 5; i++) {
     }
     console.log(stars);
 }
+
+//=========================
+// MINI PROJECT: INTERACTIVE CALCULATOR
+//=========================
+
+function calculate(num1, operator, num2) {
+    function add(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function divide(a, b) {
+        if (b === 0) {
+            return "Cannot divide by zero";
+        }
+        return a / b;
+    }
+
+    switch (operator) {
+        case "+":
+            return add(num1, num2);
+        case "-":
+            return subtract(num1, num2);
+        case "*":
+            return multiply(num1, num2);
+        case "/":
+            return divide(num1, num2);
+        default:
+            throw new Error("Invalid operator");
+    }
+}
+
+console.log("Addition:", calculate(10, "+", 5));
+console.log("Subtraction:", calculate(10, "-", 5));
+console.log("Multiplication:", calculate(10, "*", 5));
+console.log("Division:", calculate(10, "/", 5));
+console.log("Dividing by zero:", calculate(10, "/", 0));
+
+//=========================
+// ARRAYS
+//=========================
+
+// Array methods exercise
+const numbers = [5,7,32,4,8,-9,90,-5]
+console.log("Array of numbers:", numbers)
+
+const doubleNumbers= numbers.map(num => num * 2);
+console.log("Doubled:",doubleNumbers)
+
+const filterNegatives= numbers.filter(num => num > 0);
+console.log("FIltered out negatives:", filterNegatives)
+
+const firstNumber= numbers.find(num => num > 10);
+console.log("First NUmber greater than 10:", firstNumber)
+
+const productOfNumbers= numbers.reduce((total, num) => total * num, 1);
+console.log("Product of all numbers:", productOfNumbers)
+
+//=========================
+// OBJECTS
+//=========================
+
+//---------------
+// Object basics
+//---------------
+
+// Creating objects
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    isStudent: false,
+    hobbies: ["reading", "coding", "gaming"],
+    address: {
+        city: "New York",
+        country: "USA"
+    }
+};
+
+// Accessing properties
+console.log(person.firstName);         // Dot notation
+console.log(person["lastName"]);       // Bracket notation
+console.log(person.address.city);      // Nested
+
+// Modifying properties
+person.age = 31;
+person.email = "john@example.com";     // Add new property
+delete person.isStudent;               // Remove property
+
+//------------------
+// Object iteration
+//------------------
+const scores = {
+    math: 95,
+    english: 88,
+    science: 92
+};
+
+// Get keys
+console.log(Object.keys(scores));   // ["math", "english", "science"]
+
+// Get values
+console.log(Object.values(scores)); // [95, 88, 92]
+
+// Get entries
+console.log(Object.entries(scores)); // [["math", 95], ["english", 88], ...]
+
+// Loop through
+for (const [subject, score] of Object.entries(scores)) {
+    console.log(`${subject}: ${score}`);
+}
+
+//=========================
+// ARRAY OF OBJECTS
+//=========================
+
+const students = [
+    { name: "Alice", age: 22, grade: 85, major: "CS" },
+    { name: "Bob", age: 20, grade: 72, major: "Math" },
+    { name: "Charlie", age: 23, grade: 90, major: "CS" },
+    { name: "Diana", age: 21, grade: 88, major: "Physics" },
+    { name: "Eve", age: 22, grade: 95, major: "CS" }
+];
+
+// Your tasks - use array methods:
+
+// 1. Get all student names
+const names = students.map(student => student.name);
+console.log("Student names:", names);
+// 2. Get students with grade > 80
+const highAchievers = students.filter(student => student.grade > 80);
+console.log("High achievers:", highAchievers);
+
+// 3. Find the student named "Charlie"
+const findCharlie = students.find(student => student.name === "Charlie");
+console.log("Charlie:", findCharlie);
+
+// 4. Calculate average grade
+const avgGrade = students.reduce((total, student) => total + student.grade, 0) / students.length;
+console.log("Average grade:", avgGrade);
+
+// 5. Get CS majors only
+const csMajors = students.filter(student => student.major === "CS");
+console.log("CS majors:", csMajors);
+
+// 6. Sort by grade (highest first)
+const sortedByGrade = [...students].sort((a, b) => b.grade - a.grade);
+console.log("Sorted by grade:", sortedByGrade);
+
+// 7. Check if any student has grade > 90
+const hasTopStudent = students.some(student => student.grade > 90);
+console.log("Has top student:", hasTopStudent);
+
+// 8. Check if all students are passing (grade >= 60)
+const allPassing = students.every(student => student.grade >= 60);
+console.log("All passing:", allPassing);
