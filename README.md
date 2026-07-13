@@ -1,4 +1,4 @@
-# Week 04: Javascript Foundations
+# Week 04: Javascript Fundamentals
 
 ## Author
 - **Name:** Trevor Wachira
